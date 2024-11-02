@@ -1,7 +1,7 @@
 /**
  * Surge & Loon 的运行模式，根据当前网络自动切换模式，此脚本思路来自于Quantumult X。
  * @author: ldl
- * 更新地址: https://mypictureone.oss-cn-beijing.aliyuncs.com/running-modeldlllll.js
+ * 更新地址: https://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/runningmode.js
 
  
  *************** Loon配置 ***********************
@@ -9,7 +9,7 @@
  * https://mypictureone.oss-cn-beijing.aliyuncs.com/running-mode.plugin
  * 手动配置：
  * [Script]
- * network-changed script-path=https://mypictureone.oss-cn-beijing.aliyuncs.com/running-modeldlllll.js
+ * network-changed script-path=https://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/runningmode.js
  *
  *************** 脚本配置 ***********************
  * 推荐使用BoxJS配置。
