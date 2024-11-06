@@ -44,7 +44,7 @@ dns:
 #========= 建立锚点 =========#
 
 # 策略组引用
-use:  &a0 {type: select,   use: [Proxy-provider1,Proxy-provider2] }
+use:  &a0 {type: select,   use: [Proxy-provider1,Proxy-provider2],filter: "?!.*(官网|剩余|套餐)"}
 p1:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 p2:    &a2 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Proxy-provider1,Proxy-provider2],filter: "?!.*(官网|剩余|套餐)"}
@@ -77,6 +77,7 @@ proxy-providers:
 proxies: null
 proxy-groups:
 #分流分组
+  - {name: ♻️ 自动选择, <<: *a4}
   - {name: 🚀 节点选择, <<: *a0}
   - {name: 🌏 全球加速, <<: *a3}
   - {name: 🍎 苹果服务, <<: *a3}
@@ -108,7 +109,7 @@ proxy-groups:
 
 
 #节点分组
-  - {name: ♻️ 自动选择, <<: *a4}
+
   - {name: 🇭🇰 香港节点, <<: *a4, filter: "港|HK|(?i)Hong"           }             # a4更改为a2，即为手动选择
   - {name: 🇯🇵 日本节点, <<:  *a4, filter: "日|东京|JP|(?i)Japan"     }             # a4更改为a2，即为手动选择     
   - {name: 🇨🇳 台湾节点, <<: *a4, filter: "台|湾|TW|(?i)Taiwan"      }             # a4更改为a2，即为手动选择
