@@ -75,6 +75,7 @@ proxy-providers:
       enable: false
       url: ""
       interval: 300
+    filter: "^(?!.*(官网|剩余|套餐)).*$"
 
 proxies: null
 proxy-groups:
