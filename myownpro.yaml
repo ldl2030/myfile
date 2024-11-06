@@ -44,7 +44,7 @@ dns:
 #========= 建立锚点 =========#
 
 # 策略组引用
-use:  &a0 {type: select,   use: [Proxy-provider1,Proxy-provider2]}
+use:  &a0 {type: select,   use: [Proxy-provider1,Proxy-provider2, DIRECT]}
 p1:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 p2:    &a2 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Proxy-provider1,Proxy-provider2]}
@@ -162,6 +162,7 @@ rules:
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
   - RULE-SET,ChinaIp,🎯 全球直连
   - RULE-SET,Download,🎯 全球直连
+  - RULE-SET,Ownrule,🚀 节点选择
   - GEOSITE,category-public-tracker,🎯 全球直连
   - GEOIP,LAN,🎯 全球直连,no-resolve
   - GEOIP,CN,🎯 全球直连,no-resolve
@@ -424,4 +425,10 @@ rule-providers:
     behavior: classical
     url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
     path: ./providers/rule-provider_Download.yaml
+    interval: 86400
+  Ownrule:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/ownrule.yaml
+    path: ./providers/rule-provider_ownrule.yaml
     interval: 86400
