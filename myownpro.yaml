@@ -172,103 +172,103 @@ rule-providers:
   Lan:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTGFuL0xhbi5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list
     path: ./providers/rule-provider_Lan.yaml
     interval: 86400
   Direct:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlyZWN0L0RpcmVjdC5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.list
     path: ./providers/rule-provider_Direct.yaml
     interval: 86400
   Custom_Direct:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fRGlyZWN0Lmxpc3Q
+    url: https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Direct.list
     path: ./providers/rule-provider_Custom_Direct.yaml
     interval: 86400
   Custom_Proxy:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fUHJveHkubGlzdA
+    url: https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Custom_Proxy.list
     path: ./providers/rule-provider_Custom_Proxy.yaml
     interval: 86400
   GoogleFCM:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.list
     path: ./providers/rule-provider_GoogleFCM.yaml
     interval: 86400
   GoogleCN:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
     path: ./providers/rule-provider_GoogleCN.yaml
     interval: 86400
   GoogleCNProxyIP:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
     path: ./providers/rule-provider_GoogleCNProxyIP.yaml
     interval: 86400
   SteamCN:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3RlYW1DTi9TdGVhbUNOLmxpc3Q
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list
     path: ./providers/rule-provider_SteamCN.yaml
     interval: 86400
   Steam_CDN:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9TdGVhbV9DRE4ubGlzdA
+    url: https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Steam_CDN.list
     path: ./providers/rule-provider_Steam_CDN.yaml
     interval: 86400
   PrivateTracker:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvUHJpdmF0ZVRyYWNrZXIvUHJpdmF0ZVRyYWNrZXIubGlzdA
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.list
     path: ./providers/rule-provider_PrivateTracker.yaml
     interval: 86400
   Telegram:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
     path: ./providers/rule-provider_Telegram.yaml
     interval: 86400
   Twitter:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVHdpdHRlci9Ud2l0dGVyLmxpc3Q
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list
     path: ./providers/rule-provider_Twitter.yaml
     interval: 86400
   OpenAI:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvT3BlbkFJL09wZW5BSS5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
     path: ./providers/rule-provider_OpenAI.yaml
     interval: 86400
   Copilot:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ29waWxvdC9Db3BpbG90Lmxpc3Q
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
     path: ./providers/rule-provider_Copilot.yaml
     interval: 86400
   GitHub:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR2l0SHViL0dpdEh1Yi5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
     path: ./providers/rule-provider_GitHub.yaml
     interval: 86400
   Speedtest:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.list
     path: ./providers/rule-provider_Speedtest.yaml
     interval: 86400
   Apple:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
     path: ./providers/rule-provider_Apple.yaml
     interval: 86400
   Microsoft:
@@ -394,37 +394,37 @@ rule-providers:
   Steam:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3RlYW0vU3RlYW0ubGlzdA
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list
     path: ./providers/rule-provider_Steam.yaml
     interval: 86400
   ProxyGFWlist:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlHRldsaXN0Lmxpc3Q
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
     path: ./providers/rule-provider_ProxyGFWlist.yaml
     interval: 86400
   ChinaDomain:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
     path: ./providers/rule-provider_ChinaDomain.yaml
     interval: 86400
   ChinaCompanyIp:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFDb21wYW55SXAubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
     path: ./providers/rule-provider_ChinaCompanyIp.yaml
     interval: 86400
   ChinaIp:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFJcC5saXN0
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
     path: ./providers/rule-provider_ChinaIp.yaml
     interval: 86400
   Download:
     type: http
     behavior: classical
-    url: https://api.dler.io/getruleset?type=6&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.list
     path: ./providers/rule-provider_Download.yaml
     interval: 86400
   Ownrule:
