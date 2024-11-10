@@ -49,6 +49,7 @@ p1:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: 
 p2:    &a2 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Proxy-provider1,Proxy-provider2]}
 pr:   &a3 {type: select,   proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT]}
+pr1:   &a33 {type: select,   proxies: [DIRECT,♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点,]}
 c:    &a6 {type: http,     behavior: classical, interval: 86400}
 d:    &a5 {type: http,     behavior: domain,    interval: 86400}
 i:    &a7 {type: http,     behavior: ipcidr,    interval: 86400}
@@ -81,12 +82,14 @@ proxies: null
 proxy-groups:
 #分流分组
   - {name: ♻️ 自动选择, <<: *a4,filter: "^(?!.*(官网|剩余|套餐)).*$"}
-  - {name: 🚀 节点选择, <<: *a0}
+  - {name: 🚀 节点选择, type: select, proxies: [DIRECT,Proxy-provider1,Proxy-provider2]}
+  - {name: 🆎 AdBlock, type: select, proxies: [REJECT]}
+  - {name: 🎯 全球直连,type: select,proxies: [DIRECT]}
   - {name: 🌏 全球加速, <<: *a3}
-  - {name: 🍎 苹果服务, <<: *a3}
-  - {name: 🎶 网易音乐, <<: *a3}
-  - {name: 📺 国内媒体, <<: *a3}
-  - {name: 🍘️ 小米服务, <<: *a3}
+  - {name: 🍎 苹果服务, <<: *a33}
+  - {name: 🎶 网易音乐, <<: *a33}
+  - {name: 📺 国内媒体, <<: *a33}
+  - {name: 🍘️ 小米服务, <<: *a33}
   - {name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]}
   - {name: Ⓜ️ 微软服务, <<: *a3}
   - {name: 💬 Copilot, <<: *a3}
@@ -99,8 +102,6 @@ proxy-groups:
   - {name: 📟 电报消息, <<: *a3}
   - {name: 🐦 推特服务, <<: *a3}
   - {name: 🎮 游戏平台, <<: *a3}
-  - {name: 🆎 AdBlock, type: select, proxies: [REJECT]}
-  - {name: 🎯 全球直连,type: select,proxies: [DIRECT]}
   - {name: 🚀 测速工具, <<: *a3}
   - {name: 🎶 TikTok, <<: *a3}
   - {name: 🎥 Netflix, <<: *a3}
