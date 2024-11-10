@@ -44,7 +44,7 @@ dns:
 #========= 建立锚点 =========#
 
 # 策略组引用
-use:  &a0 {type: select,   use: [DIRECT,Proxy-provider1,Proxy-provider2]}
+use:  &a0 {type: select,   use: [Proxy-provider1,Proxy-provider2]}
 p1:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 p2:    &a2 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Proxy-provider1,Proxy-provider2]}
@@ -91,7 +91,7 @@ proxy-groups:
   - {name: 📺 国内媒体, <<: *a33}
   - {name: 🍘️ 小米服务, <<: *a33}
   - {name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]}
-  - {name: Ⓜ️ 微软服务, <<: *a3}
+  - {name: Ⓜ️ 微软服务, <<: *a33}
   - {name: 💬 Copilot, <<: *a3}
   - {name: 🎻 Spotify, <<: *a3}
   - {name: 📹 YouTube, <<: *a3}
