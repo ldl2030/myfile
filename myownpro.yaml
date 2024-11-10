@@ -75,7 +75,7 @@ proxy-providers:
       enable: false
       url: ""
       interval: 300
-    filter: "^(?!.*(官网|剩余|套餐)).*$"
+#    filter: "^(?!.*(官网|剩余|套餐)).*$"
 
 proxies: null
 proxy-groups:
@@ -124,6 +124,11 @@ rules:
   - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,Custom_Direct,🎯 全球直连
   - RULE-SET,Custom_Proxy,🚀 节点选择
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,XiaoMi,🍘️ 小米服务
+  - RULE-SET,NetEaseMusic,🎶 网易音乐
+  - RULE-SET,ChinaMedia,📺 国内媒体
   - RULE-SET,GoogleFCM,🇬 谷歌服务
   - RULE-SET,GoogleCN,🎯 全球直连
   - RULE-SET,GoogleCNProxyIP,🚀 节点选择
@@ -131,16 +136,13 @@ rules:
   - RULE-SET,Steam_CDN,🎯 全球直连
   - RULE-SET,PrivateTracker,🎯 全球直连
   - RULE-SET,Telegram,📟 电报消息
-  - RULE-SET,Twitter,🐦 推特服务
-  - RULE-SET,OpenAI,🤖 OpenAi
+  - RULE-SET,YouTube,📹 YouTube
   - RULE-SET,Copilot,💬 Copilot
   - RULE-SET,GitHub,🚀 GitHub
+  - RULE-SET,Twitter,🐦 推特服务
+  - RULE-SET,OpenAI,🤖 OpenAi
   - RULE-SET,Speedtest,🚀 测速工具
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,YouTube,📹 YouTube
   - RULE-SET,Google,🇬 谷歌服务
-  - RULE-SET,XiaoMi,🍘️ 小米服务
   - RULE-SET,TikTok,🎶 TikTok
   - RULE-SET,Netflix,🎥 Netflix
   - RULE-SET,Disney,🎥 DisneyPlus
@@ -148,8 +150,6 @@ rules:
   - RULE-SET,Emby,🎥 Emby
   - RULE-SET,Spotify,🎻 Spotify
   - RULE-SET,Bahamut,📺 Bahamut
-  - RULE-SET,NetEaseMusic,🎶 网易音乐
-  - RULE-SET,ChinaMedia,📺 国内媒体
   - RULE-SET,GlobalMedia,🎬 国际媒体
   - RULE-SET,Epic,🎮 游戏平台
   - RULE-SET,EA,🎮 游戏平台
