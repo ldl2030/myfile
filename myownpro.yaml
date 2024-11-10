@@ -82,7 +82,7 @@ proxies: null
 proxy-groups:
 #分流分组
   - {name: ♻️ 自动选择, <<: *a4,filter: "^(?!.*(官网|剩余|套餐)).*$"}
-  - {name: 🚀 节点选择, type: select, proxies: [DIRECT,Proxy-provider1,Proxy-provider2]}
+  - {name: 🚀 节点选择, type: select,   use: [DIRECT,Proxy-provider1,Proxy-provider2]}
   - {name: 🆎 AdBlock, type: select, proxies: [REJECT]}
   - {name: 🎯 全球直连,type: select,proxies: [DIRECT]}
   - {name: 🌏 全球加速, <<: *a3}
