@@ -61,7 +61,11 @@ tun:
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
+  default-nameserver:
+    - system
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -119,15 +123,7 @@ dns:
     - 'DC._msDCS.*.*'
     - 'PDC._msDCS.*.*'
   use-hosts: true
-  default-nameserver:
-    - system
-    - 223.5.5.5
-    - 119.29.29.29
-    - https://223.5.5.5/dns-query
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  fallback:          # 国外 DNS 服务器
+  fallback:
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
     - https://dns.alidns.com/dns-query
@@ -161,12 +157,12 @@ exclude-filter-list: &exclude-filter "网站|地址|剩余|过期|时间|有效|
 proxy-providers:  # Meta支持机场通用订阅， 直接替换 url 后方链接使用
   订阅 1:
     <<: *p
-    url: https://jsjc.cfd/api/v1/client/subscribe?token=2a385bd3d9a8e2bfa3d5374e8759f491
+    url: "机场订阅"
     path: ./proxy_provider/subscription_1.yaml
     exclude-filter: *exclude-filter
   订阅 2: 
     <<: *p
-    url: https://dy-1.smjcdh.com/api/v1/client/subscribe?token=a8a10c96c00c0e8d47e01abf666e0828
+    url: "机场订阅"
     path: ./proxy_provider/subscription_2.yaml
     exclude-filter: *exclude-filter
   订阅 3: 
