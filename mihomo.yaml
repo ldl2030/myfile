@@ -60,9 +60,10 @@ tun:
   auto-detect-interface: true
 
 dns:
-  enable: false
-  ipv6: true
+  enable: true
+  ipv6: false
   default-nameserver:
+    - system
     - 223.5.5.5
     - 119.29.29.29
   enhanced-mode: fake-ip
