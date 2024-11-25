@@ -62,7 +62,7 @@ tun:
 dns:
   enable: true
   ipv6: false
-  default-nameserver:
+  nameserver:        # 默认 DNS 服务
     - system
     - 223.5.5.5
     - 119.29.29.29
