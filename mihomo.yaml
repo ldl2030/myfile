@@ -62,10 +62,6 @@ tun:
 dns:
   enable: true
   ipv6: false
-  nameserver:        # 默认 DNS 服务
-    - system
-    - 223.5.5.5
-    - 119.29.29.29
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -123,6 +119,14 @@ dns:
     - 'DC._msDCS.*.*'
     - 'PDC._msDCS.*.*'
   use-hosts: true
+  default-nameserver:
+    - system
+    - 223.5.5.5
+    - 119.29.29.29
+    - https://223.5.5.5/dns-query
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fallback:          # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
