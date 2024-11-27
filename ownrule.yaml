@@ -1,5 +1,7 @@
 payload:
+  # > blog.ldlove
+  # - USER-AGENT,ldlove*
+  - DOMAIN-KEYWORD,ldlove
   - DOMAIN-SUFFIX,ldlove.eu.org
   - DOMAIN-SUFFIX,wmlove.eu.org
-  - DOMAIN-KEYWORD,ldlove
   - IP-CIDR,4.240.170.77/16,no-resolve
