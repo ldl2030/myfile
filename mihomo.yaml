@@ -167,7 +167,7 @@ proxy-providers:  # Meta支持机场通用订阅， 直接替换 url 后方链�
     exclude-filter: *exclude-filter
   订阅 3: 
     <<: *p
-    url: "机场订阅"
+    url: https://mypictureone.oss-cn-beijing.aliyuncs.com/hy.txt
     path: ./proxy_provider/subscription_3.yaml
     exclude-filter: *exclude-filter
   订阅 4: 
