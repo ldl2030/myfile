@@ -783,7 +783,7 @@ rule-providers:
   ownrule:
     type: http
     behavior: classical
-    url: hhttps://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/ownrule.yaml
+    url: https://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/ownrule.yaml
     path: ./rule_provider/ownrule.yaml
     interval: 86400
 rules:
