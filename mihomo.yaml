@@ -337,8 +337,8 @@ proxy-groups:
 - name: "🎧 声田音乐"
   type: select
   proxies:
-  - ✈️ 国际代理
   - 🇭🇰 香港节点
+  - ✈️ 国际代理
   - 🇹🇼 台湾节点
   - 🇸🇬 新加坡节点
   - 🇯🇵 日本节点
@@ -780,7 +780,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/Thaolga/Rules/main/Clash/Provider/LAN.yaml
     path: ./rule_provider/LAN.yaml
     interval: 86400
-
+  ownrule:
+    type: http
+    behavior: classical
+    url: hhttps://raw.githubusercontent.com/ldl2030/myfile/refs/heads/main/ownrule.yaml
+    path: ./rule_provider/ownrule.yaml
+    interval: 86400
 rules:
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
@@ -814,7 +819,8 @@ rules:
   # 国际媒体分组
   - RULE-SET,Netflix,✈️ 国际代理 #📺 网飞视频
   - RULE-SET,Disney Plus,✈️ 国际代理 #🎬 迪士尼+
-  - RULE-SET,Spotify,✈️ 国际代理 #🎧 声田音乐
+  #- RULE-SET,Spotify,✈️ 国际代理 #🎧 声田音乐
+  - RULE-SET,Spotify,🎧 声田音乐
   - RULE-SET,YouTube Music,✈️ 国际代理
   - RULE-SET,ABC,✈️ 国际代理
   - RULE-SET,Abema TV,✈️ 国际代理
@@ -862,6 +868,7 @@ rules:
   - RULE-SET,Proxy,✈️ 国际代理
   - RULE-SET,Domestic,🌏 大陆网络
   - RULE-SET,LAN,DIRECT
+  - RULE-SET,ownrule,DIRECT
 
   # 最终规则
   - GEOIP,CN,🌏 大陆网络
