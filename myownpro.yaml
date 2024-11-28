@@ -59,7 +59,7 @@ proxy-providers:
     <<: *a1
     type: http
     path: "./proxy_provider/Proxy-provider1.yaml"
-    url: "https://jsjc.cfd/api/v1/client/subscribe?token=2a385bd3d9a8e2bfa3d5374e8759f491"
+    url: 
     interval: 3600
     health-check:
       enable: false
@@ -70,7 +70,7 @@ proxy-providers:
     <<: *a2
     type: http
     path: "./proxy_provider/Proxy-provider2.yaml"
-    url: "https://dy-1.smjcdh.com/api/v1/client/subscribe?token=a8a10c96c00c0e8d47e01abf666e0828"
+    url: 
     interval: 3600
     health-check:
       enable: false
