@@ -48,7 +48,7 @@ sniffer:
     - "443"
 
 tun:
-  enable: true
+  enable: false
   prefer-h3: true
   listen: 0.0.0.0:53
   stack: gvisor
