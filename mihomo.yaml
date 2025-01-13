@@ -157,12 +157,12 @@ exclude-filter-list: &exclude-filter "网站|地址|剩余|过期|时间|有效|
 proxy-providers:  # Meta支持机场通用订阅， 直接替换 url 后方链接使用
   订阅 1:
     <<: *p
-    url: 
+    url: https://dy-1.smjcdh.com/api/v1/client/subscribe?token=88735de071637cf723fb79e995ba05a
     path: ./proxy_provider/subscription_1.yaml
     exclude-filter: *exclude-filter
   订阅 2: 
     <<: *p
-    url: 
+    url: https://jsjc.cfd/api/v1/client/subscribe?token=24a76ccb5b7405cb57ccd637cf12fc9
     path: ./proxy_provider/subscription_2.yaml
     exclude-filter: *exclude-filter
   订阅 3: 
@@ -390,7 +390,9 @@ proxy-groups:
   url:  http://www.google.com/generate_204
   interval: 300
   proxies:
+  - ⭕️ 直连
   <<: *all
+
 - name: "📌 全部节点"
   type: select
   <<: *all
