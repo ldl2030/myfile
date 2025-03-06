@@ -157,7 +157,7 @@ exclude-filter-list: &exclude-filter "网站|地址|剩余|过期|时间|有效|
 proxy-providers:  # Meta支持机场通用订阅， 直接替换 url 后方链接使用
   订阅 1:
     <<: *p
-    url: https://dy-1.smjcdh.com/api/v1/client/subscribe?token=88735de071637cf723fb79e995ba05a
+    url: https://mypictureone.oss-cn-beijing.aliyuncs.com/ne.yaml
     path: ./proxy_provider/subscription_1.yaml
     exclude-filter: *exclude-filter
   订阅 2: 
